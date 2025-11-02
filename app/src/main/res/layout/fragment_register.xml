@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackground">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_register_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/back_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fragment_register_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/register_user"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_back_btn" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/fragment_register_namefamily"
+        android:layout_width="0dp"
+        android:maxLines="1"
+        android:layout_height="60dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/edittext_border"
+        android:drawableRight="@drawable/person_icon_nobg"
+        android:drawablePadding="8dp"
+        android:hint="@string/name_family"
+        android:inputType="text"
+        android:maxLength="24"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_textview" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/fragment_register_email"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="32dp"
+        android:maxLines="1"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/edittext_border"
+        android:drawableRight="@drawable/email_icon_nobg"
+        android:drawablePadding="8dp"
+        android:hint="@string/example_mail"
+        android:inputType="textEmailAddress"
+        android:maxLength="32"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/hintColor"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_namefamily" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/fragment_register_password_layout"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/edittext_border"
+        android:layoutDirection="rtl"
+        app:hintEnabled="false"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_email"
+        app:passwordToggleDrawable="@drawable/password_eye_toggle"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/hintColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/fragment_register_password"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:drawableStart="@drawable/password_icon_nobg"
+            android:drawablePadding="8dp"
+            android:hint="@string/password"
+            android:maxLines="1"
+            android:maxLength="16"
+            android:textSize="16sp"
+            android:textColor="@color/textColor"
+            android:textColorHint="@color/hintColor" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragment_register_register_btn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/register_user"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:rippleColor="@color/pageBackground"
+        app:backgroundTint="@color/semiBackground"
+        app:cornerRadius="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_register_password_layout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

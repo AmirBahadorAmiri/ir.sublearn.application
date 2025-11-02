@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="50dp"
+    android:layout_marginBottom="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/pageBackground"
+    app:strokeColor="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:paddingLeft="8dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background_4dp"
+        android:backgroundTint="@color/blueColor">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/conversation_item_speaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/speaker_icon_nobg"
+            app:tint="@color/textColor" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/conversation_item_copy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:clickable="true"
+            android:focusable="true"
+            app:layout_constraintLeft_toLeftOf="@id/conversation_item_speaker"
+            app:layout_constraintRight_toRightOf="@id/conversation_item_speaker"
+            app:layout_constraintTop_toBottomOf="@id/conversation_item_speaker"
+            app:srcCompat="@drawable/copy_icon_nobg"
+            app:tint="@color/textColor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/conversation_item_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:gravity="top"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toRightOf="@id/conversation_item_speaker"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/conversation_item_speaker"
+            tools:text="@string/app_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

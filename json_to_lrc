@@ -1,0 +1,25 @@
+String str = ""
+
+printf(encodingString(str))
+
+public String encodingString(String str) {
+    return encode(reverse(encode(str)));
+}
+
+public String decodingString(String str) {
+    return decode(reverse(decode(str)));
+}
+
+public String decode(String str) {
+    byte[] data = Base64.getDecoder().decode(str);
+    return new String(data);
+}
+
+public String encode(String str) {
+    byte[] data = str.getBytes();
+    return Base64.getEncoder().encodeToString(data);
+}
+
+public String reverse(String str) {
+    return new StringBuilder(str).reverse().toString();
+}

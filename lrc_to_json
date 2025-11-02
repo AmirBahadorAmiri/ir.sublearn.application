@@ -1,0 +1,21 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
+String str = ""
+
+void removeTimestamps(String input) {
+    Pattern pattern = Pattern.compile("\\[(\\d{2}:\\d{2}\\.\\d{2})](.*)");
+    Pattern pattern = Pattern.compile("\[\d{2,}:\d{2,}\.\d{2,}\]");
+    StringBuilder stringBuilder = new StringBuilder();
+
+    Matcher matcher = pattern.matcher(input);
+
+    stringBuilder.append("{\n  \"data\": [\n");
+    while (matcher.find()) {
+        stringBuilder.append("[\"").append(matcher.group(2)).append("\",\"\",\"").append(matcher.group(1)).append("\"],\n");
+    }
+    stringBuilder.append("  ]\n}");
+    printf(stringBuilder.toString());
+}
+
+removeTimestamps(str);

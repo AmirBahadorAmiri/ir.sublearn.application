@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackground">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_show_word_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_show_word_settings_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/activity_show_word_back_btn"
+        app:layout_constraintLeft_toRightOf="@id/activity_show_word_back_btn"
+        app:layout_constraintTop_toTopOf="@id/activity_show_word_back_btn"
+        app:srcCompat="@drawable/setting_icon_bg" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_show_word_star_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/activity_show_word_back_btn"
+        app:layout_constraintLeft_toRightOf="@id/activity_show_word_settings_icon"
+        app:layout_constraintTop_toTopOf="@id/activity_show_word_back_btn"
+        app:srcCompat="@drawable/star_icon_outline" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="@string/word"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/activity_show_word_back_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/activity_show_word_back_btn" />
+
+    <View
+        android:id="@+id/activity_show_word_view"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_background_16dp"
+        app:layout_constraintLeft_toRightOf="@id/activity_show_word_speaker"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activity_show_word_back_btn" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_show_word_speaker"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toTopOf="@id/activity_show_word_copy"
+        app:layout_constraintLeft_toLeftOf="@id/activity_show_word_back_btn"
+        app:layout_constraintRight_toRightOf="@id/activity_show_word_back_btn"
+        app:layout_constraintTop_toTopOf="@id/activity_show_word_view"
+        app:srcCompat="@drawable/speaker_icon_nobg" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/activity_show_word_copy"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/activity_show_word_view"
+        app:layout_constraintLeft_toLeftOf="@id/activity_show_word_back_btn"
+        app:layout_constraintRight_toRightOf="@id/activity_show_word_back_btn"
+        app:layout_constraintTop_toBottomOf="@id/activity_show_word_speaker"
+        app:srcCompat="@drawable/copy_icon_nobg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/activity_show_word_from_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/activity_show_word_speaker"
+        app:layout_constraintLeft_toLeftOf="@id/activity_show_word_view"
+        app:layout_constraintTop_toTopOf="@id/activity_show_word_speaker"
+        tools:text="Hello" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/activity_show_word_to_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/activity_show_word_copy"
+        app:layout_constraintRight_toRightOf="@id/activity_show_word_view"
+        app:layout_constraintTop_toTopOf="@id/activity_show_word_copy"
+        tools:text="سلام" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

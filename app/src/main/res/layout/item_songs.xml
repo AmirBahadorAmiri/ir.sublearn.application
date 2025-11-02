@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:layout_marginBottom="4dp"
+    android:clickable="true"
+    app:cardBackgroundColor="@color/semiBackground"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="0dp"
+    app:rippleColor="@color/pageBackground"
+    app:strokeColor="@android:color/transparent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/small_circle_image_view"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/image_placeholder"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/song_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/artist_name_textview"
+            app:layout_constraintLeft_toRightOf="@id/small_circle_image_view"
+            app:layout_constraintTop_toTopOf="@+id/small_circle_image_view"
+            tools:text="SARKOOB" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/artist_name_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginLeft="8dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/hintColor"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/small_circle_image_view"
+            app:layout_constraintLeft_toRightOf="@id/small_circle_image_view"
+            app:layout_constraintTop_toBottomOf="@+id/song_name_textview"
+            tools:text="YAS" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

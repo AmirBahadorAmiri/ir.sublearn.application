@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackground"
+    android:keepScreenOn="true"
+    tools:context=".views.activities.SongPlayerActivity">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/big_picture"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/image_placeholder" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/black_shader"
+        app:layout_constraintBottom_toBottomOf="@id/big_picture"
+        app:layout_constraintLeft_toLeftOf="@id/big_picture"
+        app:layout_constraintRight_toRightOf="@id/big_picture"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/song_player_back_btn"
+        android:layout_marginTop="16dp"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="@drawable/ripple_color"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/back_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/song_name_textview"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/media_duration_seekbar"
+        app:layout_constraintLeft_toLeftOf="@id/media_duration_seekbar"
+        app:layout_constraintRight_toRightOf="@id/media_duration_seekbar"
+        tools:text="SARKOOB" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/media_player_lyric_en"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="40dp"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/media_player_lyric_fa"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="There’s a fire starting in my heart\nReaching a fever pitch and it’s bringing me out the dark" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/media_player_lyric_fa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/song_name_textview"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:text="Finally, I can see you crystal clear\nGo ahead and sell me out and I’ll lay your ship bare" />
+
+    <com.masoudss.lib.WaveformSeekBar
+        android:id="@+id/media_duration_seekbar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/media_play_pause"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:marker_color="#2FFF00"
+        app:marker_text_color="#0A00FF"
+        app:marker_text_padding="2dp"
+        app:marker_text_size="12dp"
+        app:marker_width="1dp"
+        app:wave_background_color="@color/hintColor"
+        app:wave_corner_radius="2dp"
+        app:wave_gap="2dp"
+        app:wave_gravity="center"
+        app:wave_max_progress="100"
+        app:wave_min_height="5dp"
+        app:wave_padding_Bottom="2dp"
+        app:wave_padding_left="2dp"
+        app:wave_padding_right="2dp"
+        app:wave_padding_top="2dp"
+        app:wave_progress_color="@color/blueColor"
+        app:wave_visible_progress="100"
+        app:wave_width="5dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/currentTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:text="00:00"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintLeft_toLeftOf="@id/media_duration_seekbar"
+        app:layout_constraintTop_toBottomOf="@+id/media_duration_seekbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/endTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="8dp"
+        android:text="00:00"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintRight_toRightOf="@id/media_duration_seekbar"
+        app:layout_constraintTop_toBottomOf="@+id/media_duration_seekbar" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/media_backward"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/ripple_color"
+        android:clickable="true"
+        android:src="@drawable/ic_fast_backward"
+        android:tint="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="@+id/media_play_pause"
+        app:layout_constraintRight_toLeftOf="@id/media_play_pause"
+        app:layout_constraintTop_toTopOf="@+id/media_play_pause" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/media_play_pause"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/ripple_color"
+        android:clickable="true"
+        android:src="@drawable/ic_play"
+        android:tint="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/media_forward"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/ripple_color"
+        android:clickable="true"
+        android:src="@drawable/ic_fast_forward"
+        android:tint="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="@+id/media_play_pause"
+        app:layout_constraintLeft_toRightOf="@id/media_play_pause"
+        app:layout_constraintTop_toTopOf="@+id/media_play_pause" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

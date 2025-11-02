@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackground">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_translate_settings_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting_icon_bg" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_translate_history_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_translate_settings_icon"
+        app:layout_constraintLeft_toRightOf="@id/fragment_translate_settings_icon"
+        app:layout_constraintTop_toTopOf="@id/fragment_translate_settings_icon"
+        app:srcCompat="@drawable/history_icon" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_translate_conversation_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_translate_settings_icon"
+        app:layout_constraintLeft_toRightOf="@id/fragment_translate_history_icon"
+        app:layout_constraintTop_toTopOf="@id/fragment_translate_settings_icon"
+        app:srcCompat="@drawable/conversation_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="@string/translate"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_translate_settings_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fragment_translate_settings_icon" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragment_translate_from_btn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="8dp"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:backgroundTint="@color/semiBackground"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_translate_reverse_icon"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/fragment_translate_reverse_icon"
+        app:layout_constraintTop_toTopOf="@id/fragment_translate_reverse_icon"
+        app:rippleColor="@color/pageBackground"
+        tools:text="فارسی" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_translate_reverse_icon"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_translate_settings_icon"
+        app:srcCompat="@drawable/reverse_icon_nobg" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragment_translate_to_btn"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:backgroundTint="@color/semiBackground"
+        app:cornerRadius="8dp"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_translate_reverse_icon"
+        app:layout_constraintLeft_toRightOf="@id/fragment_translate_reverse_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fragment_translate_reverse_icon"
+        app:rippleColor="@color/pageBackground"
+        tools:text="انگلیسی" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_translate_mic_btn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_translate_from_btn"
+        app:srcCompat="@drawable/mic_icon_nobg" />
+
+    <View
+        android:id="@+id/fragment_translate_text_view"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/round_background_16dp"
+        app:layout_constraintLeft_toRightOf="@id/fragment_translate_mic_btn"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fragment_translate_mic_btn" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/fragment_translate_edittext"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@android:color/transparent"
+        android:gravity="top"
+        android:hint="@string/insert_your_text"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/hintColor"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_translate_text_view"
+        app:layout_constraintLeft_toLeftOf="@id/fragment_translate_text_view"
+        app:layout_constraintRight_toRightOf="@id/fragment_translate_text_view"
+        app:layout_constraintTop_toTopOf="@id/fragment_translate_text_view" />
+
+    <ScrollView
+        android:id="@+id/fragment_translate_scrollview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_background_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="@id/fragment_translate_text_view"
+        app:layout_constraintRight_toRightOf="@id/fragment_translate_text_view"
+        app:layout_constraintTop_toBottomOf="@id/fragment_translate_text_view">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fragment_translate_textview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="16dp"
+                android:gravity="top"
+                tools:text="ترجمه متن" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </ScrollView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_translate_speaker_btn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="@id/fragment_translate_mic_btn"
+        app:layout_constraintRight_toRightOf="@id/fragment_translate_mic_btn"
+        app:layout_constraintTop_toBottomOf="@id/fragment_translate_text_view"
+        app:srcCompat="@drawable/speaker_icon_nobg" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_translate_copy_btn"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="@id/fragment_translate_mic_btn"
+        app:layout_constraintRight_toRightOf="@id/fragment_translate_mic_btn"
+        app:layout_constraintTop_toBottomOf="@id/fragment_translate_speaker_btn"
+        app:srcCompat="@drawable/copy_icon_nobg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

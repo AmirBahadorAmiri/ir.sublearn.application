@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackground">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_profile_settings_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/setting_icon_bg" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_profile_profile_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_profile_settings_icon"
+        app:layout_constraintLeft_toRightOf="@id/fragment_profile_settings_icon"
+        app:layout_constraintTop_toTopOf="@id/fragment_profile_settings_icon"
+        app:srcCompat="@drawable/person_icon_bg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="16dp"
+        android:text="@string/profile"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_profile_settings_icon"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fragment_profile_settings_icon" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_profile_user_account_cardview"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/semiBackground"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_profile_settings_icon"
+        app:rippleColor="@color/pageBackground"
+        app:strokeColor="@android:color/transparent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/user_account"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/person_icon_nobg" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_profile_settings_cardview"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/semiBackground"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_profile_user_account_cardview"
+        app:rippleColor="@color/pageBackground"
+        app:strokeColor="@android:color/transparent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/settings"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/setting_icon_nobg" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_profile_support_cardview"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/semiBackground"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_profile_settings_cardview"
+        app:rippleColor="@color/pageBackground"
+        app:strokeColor="@android:color/transparent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/support"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/support_icon" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_profile_invite_cardview"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/semiBackground"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_profile_support_cardview"
+        app:rippleColor="@color/pageBackground"
+        app:strokeColor="@android:color/transparent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical"
+                android:text="@string/invite_friends"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="16dp"
+                app:srcCompat="@drawable/invite_friends_icon" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fragment_profile_negaresh_cardview"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardBackgroundColor="@color/semiBackground"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_profile_invite_cardview"
+        app:rippleColor="@color/pageBackground"
+        app:strokeColor="@android:color/transparent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/fragment_profile_negaresh_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginLeft="16dp"
+                android:gravity="center_vertical"
+                android:textColor="@color/hintColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_profile_ic_info"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/fragment_profile_ic_info"
+                tools:text="1.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center_vertical"
+                android:text="نگارش"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/fragment_profile_ic_info"
+                app:layout_constraintRight_toLeftOf="@id/fragment_profile_ic_info"
+                app:layout_constraintTop_toTopOf="@id/fragment_profile_ic_info" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fragment_profile_ic_info"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_info" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_profile_rubika"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:srcCompat="@drawable/ic_rubika" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_profile_telegram"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/fragment_profile_rubika"
+        app:srcCompat="@drawable/ic_telegram" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_profile_instagram"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/fragment_profile_telegram"
+        app:srcCompat="@drawable/ic_instagram" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/fragment_profile_rubika"
+        app:layout_constraintTop_toTopOf="@id/fragment_profile_rubika"
+        android:text="@string/my_social_network"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginRight="16dp"
+        android:textColor="@color/textColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

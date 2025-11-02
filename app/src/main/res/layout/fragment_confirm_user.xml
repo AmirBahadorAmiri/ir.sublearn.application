@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/pageBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/fragment_confirm_user_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fragment_user_confirm_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/confirm"
+        android:textColor="@color/textColor"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_confirm_user_back_btn" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/fragment_user_authorization_code"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:background="@drawable/edittext_border"
+        android:drawableRight="@drawable/password_icon_nobg"
+        android:drawablePadding="8dp"
+        android:hint="@string/authorization_code"
+        android:inputType="numberDecimal"
+        android:maxLength="4"
+        android:maxLines="1"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/textColor"
+        android:textColorHint="@color/hintColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_confirm_title" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/fragment_confirm_user_login_btn"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="32dp"
+        android:text="@string/login_user"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/semiBackground"
+        app:cornerRadius="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fragment_user_authorization_code"
+        app:rippleColor="@color/pageBackground" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
