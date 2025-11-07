@@ -1,5 +1,7 @@
 package ir.sublearn.application.models;
 
+import ir.sublearn.application.tools.iokhttp.IOkHttp;
+
 public class SeriesModel {
     private String seriesId;
     private String seriesName;

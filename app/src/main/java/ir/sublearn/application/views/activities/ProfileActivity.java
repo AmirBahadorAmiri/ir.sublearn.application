@@ -15,7 +15,7 @@ import io.reactivex.rxjava3.disposables.Disposable;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import ir.sublearn.application.R;
 import ir.sublearn.application.models.UserModel;
-import ir.sublearn.application.tools.AES.AES;
+import ir.sublearn.application.tools.Hasher.Hasher;
 import ir.sublearn.application.tools.devices.Devices;
 import ir.sublearn.application.tools.mydb.MyDB;
 
@@ -55,8 +55,8 @@ public class ProfileActivity extends BaseActivity {
                     @Override
                     public void onSuccess(@NonNull UserModel userModel) {
                         try {
-                            activity_profile_username.setText(AES.decrypt(userModel.getUser_name(), Devices.getUniqueId(ProfileActivity.this)));
-                            activity_profile_user_email.setText(AES.decrypt(userModel.getUser_email(), Devices.getUniqueId(ProfileActivity.this)));
+                            activity_profile_username.setText(Hasher.decrypt(userModel.getUser_name(), Devices.getUniqueId(ProfileActivity.this)));
+                            activity_profile_user_email.setText(Hasher.decrypt(userModel.getUser_email(), Devices.getUniqueId(ProfileActivity.this)));
                         } catch (Exception e) {
                             Log.d(TAG, "onSuccess: " + e.getMessage());
                         }

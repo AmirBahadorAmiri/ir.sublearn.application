@@ -29,7 +29,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 import ir.sublearn.application.R;
 import ir.sublearn.application.listener.ResponseListener;
 import ir.sublearn.application.models.UserModel;
-import ir.sublearn.application.tools.AES.AES;
+import ir.sublearn.application.tools.Hasher.Hasher;
 import ir.sublearn.application.tools.devices.Devices;
 import ir.sublearn.application.tools.mydb.MyDB;
 import ir.sublearn.application.tools.network_manager.NetworktManager;
@@ -112,9 +112,9 @@ public class ConfirmUserFragment extends Fragment {
                                         case 2:
                                             JSONObject user = object.getJSONObject("user");
                                             int user_id = user.getInt("user_id");
-                                            String user_name = AES.encrypt(user.getString("user_name"), Devices.getUniqueId(requireContext()));
-                                            String user_email = AES.encrypt(user.getString("user_email"), Devices.getUniqueId(requireContext()));
-                                            String api_authorization_key = AES.encrypt(user.getString("api_authorization_key"), Devices.getUniqueId(requireContext()));
+                                            String user_name = Hasher.encrypt(user.getString("user_name"), Devices.getUniqueId(requireContext()));
+                                            String user_email = Hasher.encrypt(user.getString("user_email"), Devices.getUniqueId(requireContext()));
+                                            String api_authorization_key = Hasher.encrypt(user.getString("api_authorization_key"), Devices.getUniqueId(requireContext()));
 
                                             MyDB.getInstance(requireContext()).getUserDao()
                                                     .insert(new UserModel(user_id, user_name, user_email, api_authorization_key))

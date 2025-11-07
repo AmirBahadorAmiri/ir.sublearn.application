@@ -9,8 +9,8 @@ import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 import ir.sublearn.application.R;
 import ir.sublearn.application.views.fragments.DictionaryFragment;
-import ir.sublearn.application.views.fragments.HomeFragment;
-import ir.sublearn.application.views.fragments.LearnFragment;
+import ir.sublearn.application.views.fragments.CinemaFragment;
+import ir.sublearn.application.views.fragments.MusicFragment;
 import ir.sublearn.application.views.fragments.ProfileFragment;
 import ir.sublearn.application.views.fragments.TranslateFragment;
 
@@ -46,8 +46,8 @@ public class MainActivity extends BaseActivity {
     public void setupBottomNavigation() {
 
         main_activity_bottom_navigation.setOnItemSelectedListener(id -> {
-            if (id == R.id.home) {
-                changeFragment(HomeFragment.getHomeFragment());
+            if (id == R.id.cinema) {
+                changeFragment(CinemaFragment.getCinemaFragment());
             }
             if (id == R.id.dictionary) {
                 changeFragment(DictionaryFragment.getDictionaryFragment());
@@ -56,13 +56,13 @@ public class MainActivity extends BaseActivity {
                 changeFragment(TranslateFragment.getTranslateFragment());
             }
             if (id == R.id.learn) {
-                changeFragment(LearnFragment.getLearnFragment());
+                changeFragment(MusicFragment.getMusicFragment());
             }
             if (id == R.id.profile) {
                 changeFragment(ProfileFragment.getProfileFragment());
             }
         });
-        main_activity_bottom_navigation.setItemSelected(R.id.home,true);
+        main_activity_bottom_navigation.setItemSelected(R.id.cinema,true);
 
     }
 

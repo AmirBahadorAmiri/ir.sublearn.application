@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/home" android:title="@string/home" android:icon="@drawable/ic_home" />
+    <item android:id="@+id/cinema" android:title="@string/cinema" android:icon="@drawable/ic_movie" />
     <item android:id="@+id/dictionary" android:title="@string/dictionary" android:icon="@drawable/ic_search" />
     <item android:id="@+id/translate" android:title="@string/translate" android:icon="@drawable/ic_translate" />
-    <item android:id="@+id/learn" android:title="@string/learn" android:icon="@drawable/ic_book" />
+    <item android:id="@+id/learn" android:title="@string/musics" android:icon="@drawable/ic_music" />
     <item android:id="@+id/profile" android:title="@string/profile" android:icon="@drawable/person_icon_nobg" />
 </menu>

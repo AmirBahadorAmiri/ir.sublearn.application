@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.appcompat.widget.AppCompatSpinner;
+import androidx.appcompat.widget.AppCompatTextView;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -42,6 +43,8 @@ public class SeriesActivity extends BaseActivity {
     List<EpisodeModel> episodeModels = new ArrayList<>();
     RecyclerView activity_cinematv_movies_recyclerview;
     EpisodeAdapter episodeAdapter;
+    AppCompatTextView activity_series_name;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -57,6 +60,7 @@ public class SeriesActivity extends BaseActivity {
         activity_series_background_img = findViewById(R.id.activity_series_background_img);
         activity_series_spinner_view = findViewById(R.id.activity_series_spinner_view);
         activity_cinematv_movies_recyclerview = findViewById(R.id.activity_cinematv_movies_recyclerview);
+        activity_series_name = findViewById(R.id.activity_series_name);
     }
 
     private void setup() {
@@ -65,6 +69,8 @@ public class SeriesActivity extends BaseActivity {
             series_name = getIntent().getStringExtra("series_name");
             series_poster = getIntent().getStringExtra("series_poster");
         }
+
+        activity_series_name.setText(series_name);
 
         activity_series_back_btn.setOnClickListener(v -> finish());
 

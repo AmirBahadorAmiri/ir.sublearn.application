@@ -3,10 +3,15 @@ package ir.sublearn.application.views.activities;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatTextView;
+
+import com.google.android.material.button.MaterialButton;
 
 import org.json.JSONObject;
 
@@ -22,7 +27,7 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 import ir.sublearn.application.R;
 import ir.sublearn.application.listener.ResponseListener;
 import ir.sublearn.application.models.UserModel;
-import ir.sublearn.application.tools.AES.AES;
+import ir.sublearn.application.tools.Hasher.Hasher;
 import ir.sublearn.application.tools.iokhttp.IOkHttp;
 import ir.sublearn.application.tools.mydb.MyDB;
 import ir.sublearn.application.tools.packager.Packager;
@@ -91,13 +96,12 @@ public class SplashActivity extends BaseActivity {
 
     private void goNext(boolean userFound) {
 
-        AES.generateUltraSecurePassword();
+        Hasher.generateUltraSecurePassword();
 
         RequestBody requestBody = new FormBody.Builder()
                 .add("app_version_code", String.valueOf(Packager.getVersionCode(this)))
                 .add("app_version_name", Packager.getVersionName(this))
-                .add("signature_key", Packager.getSignature())
-                .add("pass", AES.getPassword())
+                .add("API_PASSWORD", Hasher.getPassword())
                 .build();
 
         AppVersionChecker.app_version_checker(requestBody, new ResponseListener() {
@@ -107,7 +111,8 @@ public class SplashActivity extends BaseActivity {
                 if (response.isSuccessful()) {
                     try {
                         String string = response.body().string();
-                        String json = AES.decrypt(string, AES.getPassword());
+                        String json = Hasher.decrypt(string, Hasher.getPassword());
+                        Log.d("TAG", "onSuccess: " + json);
                         JSONObject jsonObject = new JSONObject(json);
                         int result_code = jsonObject.getInt("result_code");
                         switch (result_code) {
@@ -135,21 +140,31 @@ public class SplashActivity extends BaseActivity {
                                 IOkHttp.setGet_top_movies(jsonObject.getString("get_top_movies"));
                                 IOkHttp.setGet_top_series(jsonObject.getString("get_top_series"));
 
-                                if (can_use) {
-                                    if (userFound)
-                                        goToMain();
-                                    else
-                                        goToLogister();
-                                }
-//                                if ( can_use ) {
-//                                    if ( can_update ) {
-//                                    } else {
-//                                    }
-//                                } else {
-//                                    if ( can_update ) {
-//                                    } else {
-//                                    }
-//                                }
+                                runOnUiThread(() -> {
+                                    if (can_use) {
+                                        if (can_update) {
+                                            AlertDialog alertDialog = new AlertDialog.Builder(SplashActivity.this).create();
+                                            View view = LayoutInflater.from(SplashActivity.this).inflate(R.layout.dialog_update, null);
+                                            alertDialog.setView(view);
+                                            alertDialog.setCancelable(true);
+                                            MaterialButton dialog_update_btnUpdate = view.findViewById(R.id.dialog_update_btnUpdate);
+                                            dialog_update_btnUpdate.setOnClickListener(v -> Packager.openInMarket(SplashActivity.this));
+                                            alertDialog.setOnDismissListener(v -> canNext(userFound));
+                                            alertDialog.show();
+                                        } else {
+                                            canNext(userFound);
+                                        }
+                                    } else {
+                                        AlertDialog alertDialog = new AlertDialog.Builder(SplashActivity.this).create();
+                                        View view = LayoutInflater.from(SplashActivity.this).inflate(R.layout.dialog_update, null);
+                                        alertDialog.setView(view);
+                                        alertDialog.setCancelable(false);
+                                        MaterialButton dialog_update_btnUpdate = view.findViewById(R.id.dialog_update_btnUpdate);
+                                        dialog_update_btnUpdate.setOnClickListener(v -> Packager.openInMarket(SplashActivity.this));
+                                        alertDialog.setOnDismissListener(v -> finish());
+                                        alertDialog.show();
+                                    }
+                                });
                                 break;
                             case 3:
                                 runOnUiThread(() -> Toast.makeText(SplashActivity.this, getString(R.string.support_for_problem), Toast.LENGTH_SHORT).show());
@@ -160,7 +175,7 @@ public class SplashActivity extends BaseActivity {
                         }
 
                     } catch (Exception e) {
-                        Log.d("TAG", "onSuccess: " + e.getMessage());
+                        Log.d("TAG", "onFailure2: " + e.getMessage());
                     }
                 } else {
                     Log.d("TAG", "onFailure: " + response.code());
@@ -175,6 +190,12 @@ public class SplashActivity extends BaseActivity {
         });
     }
 
+    public void canNext(boolean userFound) {
+        if (userFound)
+            goToMain();
+        else
+            goToLogister();
+    }
 
     private void goToMain() {
         startActivity(new Intent(SplashActivity.this, MainActivity.class));

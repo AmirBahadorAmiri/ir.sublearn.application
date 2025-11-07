@@ -24,7 +24,9 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:text="@string/translate_history"
-        android:textAppearance="@style/TextLarge"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/HeaderText"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/activity_translate_history_back_btn"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@id/activity_translate_history_back_btn" />

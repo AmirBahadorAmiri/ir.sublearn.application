@@ -39,6 +39,10 @@ public class Packager {
         context.startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=" + context.getPackageName())));
     }
 
+    public static void openInMarket(Context context) {
+        context.startActivity(Intent.createChooser(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + context.getPackageName())),""));
+    }
+
     public static int getSdkCode() {
         return Build.VERSION.SDK_INT;
     }

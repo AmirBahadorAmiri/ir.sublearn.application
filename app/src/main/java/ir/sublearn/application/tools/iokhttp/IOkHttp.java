@@ -14,7 +14,7 @@ import okhttp3.Response;
 public class IOkHttp {
 
     private OkHttpClient client;
-    public static final String mainhost_url = "http://10.145.118.133";
+    public static final String mainhost_url = "http://10.27.78.126";
 //    public static final String mainhost_url = "https://amirbahadoramiri.ir";
 
     private static String login;

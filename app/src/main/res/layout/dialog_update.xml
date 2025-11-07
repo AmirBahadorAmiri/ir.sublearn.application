@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBackground">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dialog_update_cardview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="@color/semiBackground"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@android:color/transparent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        app:layout_constraintBottom_toBottomOf="@id/dialog_update_cardview"
+        app:layout_constraintLeft_toLeftOf="@id/dialog_update_cardview"
+        app:layout_constraintRight_toRightOf="@id/dialog_update_cardview"
+        app:layout_constraintTop_toTopOf="@id/dialog_update_cardview"
+        app:srcCompat="@drawable/reverse_icon_nobg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dialog_update_new_version"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="آپدیت جدید"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        android:textSize="@dimen/HeaderText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_update_cardview" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/dialog_update_new_version_msg"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="center"
+        android:text="نرم افزار نیازمند بروزرسانی میباشد"
+        android:textStyle="bold"
+        android:textColor="@color/hintColor"
+        android:textSize="@dimen/MediumText"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_update_new_version" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/dialog_update_btnUpdate"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="16dp"
+        android:text="آپدیت"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:textSize="@dimen/LargeText"
+        app:backgroundTint="@color/semiBackground"
+        app:cornerRadius="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dialog_update_new_version_msg"
+        app:rippleColor="@color/pageBackground" />
+    <View
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@id/dialog_update_btnUpdate"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="1dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

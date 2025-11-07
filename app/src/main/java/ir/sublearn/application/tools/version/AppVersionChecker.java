@@ -14,7 +14,7 @@ public class AppVersionChecker {
 //                .add("app_version_name", "secure123")
 //                .add("signature_key", "secure123")
 //                .build();
-        iOkHttp.post(IOkHttp.mainhost_url + "/defineit/api/version/app_version_checker.php", formBody, new ResponseListener() {
+        iOkHttp.post(IOkHttp.mainhost_url + "/sublearn/api/version/app_version_checker.php", formBody, new ResponseListener() {
             @Override
             public void onSuccess(Response response) {
                 responseListener.onSuccess(response);
