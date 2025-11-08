@@ -59,6 +59,8 @@ public class SongAdapter extends RecyclerView.Adapter<SongAdapter.MainHolder> {
         Dexter.withContext(context)
                 .withPermissions(
                         Manifest.permission.INTERNET,
+                        Manifest.permission.READ_EXTERNAL_STORAGE,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE,
                         Manifest.permission.READ_MEDIA_AUDIO
                 )
                 .withListener(new MultiplePermissionsListener() {

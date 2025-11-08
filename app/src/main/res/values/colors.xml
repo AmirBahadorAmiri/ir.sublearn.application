@@ -4,10 +4,11 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 
-    <color name="pageBackground">#191A1F</color>
-    <color name="semiBackground">#2C2F42</color>
+    <color name="pageBackground">#FAFAFA</color>
+    <color name="semiBackground">#DCECF4</color>
     <color name="hintColor">#919191</color>
-    <color name="textColor">#FAFAFA</color>
+    <color name="textColor">#191A1F</color>
+    <color name="onDarkColor">#FAFAFA</color>
     <color name="blueColor">#258CF3</color>
     <color name="greenColor">#00C68B</color>
 

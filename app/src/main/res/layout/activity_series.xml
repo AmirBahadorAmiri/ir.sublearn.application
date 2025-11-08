@@ -34,12 +34,12 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/ripple_color"
+        app:tint="@color/onDarkColor"
         android:clickable="true"
         android:focusable="true"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/back_icon"
-        app:tint="@color/textColor" />
+        app:srcCompat="@drawable/back_icon" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/activity_series_name"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="16dp"
         android:text="@string/cinema"
-        android:textColor="@color/textColor"
+        android:textColor="@color/onDarkColor"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@id/activity_series_back_btn"

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
 
-    <style name="Theme.SubLearn" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.SubLearn" parent="Theme.Material3.DayNight.NoActionBar">
 
         <item name="android:windowDisablePreview">true</item>
         <item name="android:fitsSystemWindows">false</item>
