@@ -4,7 +4,7 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "ir.sublearn.application",
+  "applicationId": "ir.sublearn",
   "variantName": "release",
   "elements": [
     {

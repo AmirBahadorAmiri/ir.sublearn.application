@@ -6,4 +6,4 @@
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
     android:background="@color/pageBackground"
-    tools:context=".views.activities.LogisterActivity" />
+    tools:context="ir.sublearn.views.activities.LogisterActivity" />

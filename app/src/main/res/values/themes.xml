@@ -1,12 +1,10 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <style name="Theme.SubLearn" parent="Theme.Material3.DayNight.NoActionBar">
-
         <item name="android:windowDisablePreview">true</item>
         <item name="android:fitsSystemWindows">false</item>
         <item name="android:windowFullscreen">true</item>
         <item name="android:navigationBarColor">@color/semiBackground</item>
-
     </style>
 
 </resources>

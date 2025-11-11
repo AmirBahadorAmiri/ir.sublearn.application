@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace 'ir.sublearn.application'
+    namespace 'ir.sublearn'
     compileSdk 36
 
     room {
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "ir.sublearn.application"
+        applicationId 'ir.sublearn'
         minSdk 28
         targetSdk 36
         versionCode 1
@@ -62,10 +62,6 @@ dependencies {
     implementation 'de.hdodenhof:circleimageview:3.1.0'
 
     implementation 'com.squareup.okhttp3:okhttp:5.3.0'
-
-    implementation 'com.github.massoudss:waveformSeekBar:5.0.2'
-    //noinspection Aligned16KB
-    implementation 'com.github.lincollincol:amplituda:2.2.2'
 
     implementation "androidx.media3:media3-exoplayer:1.8.0"
     implementation "androidx.media3:media3-ui:1.8.0"
