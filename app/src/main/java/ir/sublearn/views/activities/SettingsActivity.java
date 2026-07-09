@@ -11,7 +11,7 @@ import androidx.appcompat.widget.AppCompatImageView;
 import com.google.android.material.button.MaterialButton;
 
 import ir.sublearn.R;
-import ir.sublearn.tools.tts_manager.TTsSingle;
+import ir.sublearn.tools.speecher.Speecher;
 
 public class SettingsActivity extends BaseActivity {
 
@@ -43,17 +43,17 @@ public class SettingsActivity extends BaseActivity {
                 switch (which) {
                     case 0:
                         Toast.makeText(SettingsActivity.this, "صدای آقا انتخاب شد", Toast.LENGTH_SHORT).show();
-                        TTsSingle.setMan(SettingsActivity.this,true);
+                        Speecher.setMan(SettingsActivity.this,true);
                         dialog.dismiss();
                         break;
                     case 1:
                         Toast.makeText(SettingsActivity.this, "صدای خانوم انتخاب شد", Toast.LENGTH_SHORT).show();
-                        TTsSingle.setMan(SettingsActivity.this,false);
+                        Speecher.setMan(SettingsActivity.this,false);
                         dialog.dismiss();
                         break;
                 }
             };
-            if ( TTsSingle.isMan(this) ) {
+            if ( Speecher.isMan(this) ) {
                 alertDialog.setSingleChoiceItems(str, 0, dialogClickListener);
             } else {
                 alertDialog.setSingleChoiceItems(str, 1, dialogClickListener);

@@ -21,7 +21,7 @@ import ir.sublearn.R;
 import ir.sublearn.listener.ResponseListener;
 import ir.sublearn.models.ConversationModel;
 import ir.sublearn.tools.copy_helper.CopyHelper;
-import ir.sublearn.tools.tts_manager.TTsSingle;
+import ir.sublearn.tools.speecher.Speecher;
 import ir.sublearn.tools.volume_manager.VolumeManager;
 import okhttp3.Response;
 
@@ -80,11 +80,11 @@ public class ConversationAdapter extends RecyclerView.Adapter<ConversationAdapte
                     Snackbar.make(v, "صدای سیستم قطع است", Snackbar.LENGTH_LONG)
                             .setAction("افزایش صدا", n -> VolumeManager.setVolume(itemView.getContext(), VolumeManager.getManager(itemView.getContext()).getStreamMaxVolume(AudioManager.STREAM_MUSIC))).setActionTextColor(ContextCompat.getColor(itemView.getContext(), R.color.blueColor)).show();
                 } else {
-                    TTsSingle.initialize(itemView.getContext(), new ResponseListener() {
+                    Speecher.initialize(itemView.getContext(), new ResponseListener() {
                         @Override
                         public void onSuccess(Response response) {
-                            if (TTsSingle.isSupportLanguage(itemView.getContext(), conversationModelList.get(position).getLanguageCode())) {
-                                TTsSingle.speak(itemView.getContext(), conversationModelList.get(position).getText());
+                            if (Speecher.isSupportLanguage(itemView.getContext(), conversationModelList.get(position).getLanguageCode())) {
+                                Speecher.speak(itemView.getContext(), conversationModelList.get(position).getText());
                             } else {
                                 Toast.makeText(itemView.getContext(), "بسته نرم افزار صوتی این زبان نصب نشده است", Toast.LENGTH_SHORT).show();
                             }

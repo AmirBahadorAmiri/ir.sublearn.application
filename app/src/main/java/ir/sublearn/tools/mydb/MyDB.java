@@ -60,7 +60,7 @@ public abstract class MyDB extends RoomDatabase {
                         public void migrate(@NonNull SupportSQLiteDatabase database) {
                         }
                     })
-                    .fallbackToDestructiveMigration()
+                    .fallbackToDestructiveMigration(false)
                     .build();
 
         /*

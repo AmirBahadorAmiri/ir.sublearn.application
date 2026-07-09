@@ -1,4 +1,4 @@
-package ir.sublearn.tools.tts_manager;
+package ir.sublearn.tools.speecher;
 
 import android.content.Context;
 import android.os.Build;
@@ -11,7 +11,13 @@ import ir.sublearn.listener.ResponseListener;
 import ir.sublearn.tools.language_manager.LanguageManager;
 import ir.sublearn.tools.shared_helper.SharedSingle;
 
-public class TTsSingle {
+/*
+ *   Created by: @AmirBahadorAmiri
+ *   Created at: 2026-06-13 13:28:56
+ *   Github: https://github.com/AmirBahadorAmiri
+ */
+
+public class Speecher {
 
     private static TextToSpeech textToSpeech;
 

@@ -8,7 +8,7 @@ import io.github.inflationx.viewpump.ViewPump;
 import ir.sublearn.listener.ResponseListener;
 import ir.sublearn.tools.copy_helper.CopyHelper;
 import ir.sublearn.tools.language_manager.LanguageManager;
-import ir.sublearn.tools.tts_manager.TTsSingle;
+import ir.sublearn.tools.speecher.Speecher;
 import okhttp3.Response;
 
 public class AppManager extends Application {
@@ -22,10 +22,10 @@ public class AppManager extends Application {
     }
 
     private void setupTTS() {
-        TTsSingle.initialize(getApplicationContext(), new ResponseListener() {
+        Speecher.initialize(getApplicationContext(), new ResponseListener() {
             @Override
             public void onSuccess(Response response) {
-                TTsSingle.isSupportLanguage(getApplicationContext(), LanguageManager.getDefaultVoiceLanguage(getBaseContext()));
+                Speecher.isSupportLanguage(getApplicationContext(), LanguageManager.getDefaultVoiceLanguage(getBaseContext()));
             }
 
             @Override

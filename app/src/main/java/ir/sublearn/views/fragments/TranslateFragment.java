@@ -43,7 +43,7 @@ import ir.sublearn.tools.language_manager.LanguageManager;
 import ir.sublearn.tools.mydb.MyDB;
 import ir.sublearn.tools.network_manager.NetworktManager;
 import ir.sublearn.tools.translate_manager.TranslateManager;
-import ir.sublearn.tools.tts_manager.TTsSingle;
+import ir.sublearn.tools.speecher.Speecher;
 import ir.sublearn.tools.volume_manager.VolumeManager;
 import ir.sublearn.views.activities.ChangeLanguageActivity;
 import ir.sublearn.views.activities.ConversationActivity;
@@ -102,11 +102,11 @@ public class TranslateFragment extends Fragment {
                     Snackbar.make(v, "صدای سیستم قطع است", Snackbar.LENGTH_LONG)
                             .setAction("افزایش صدا", n -> VolumeManager.setVolume(requireContext(), VolumeManager.getManager(requireContext()).getStreamMaxVolume(AudioManager.STREAM_MUSIC))).setActionTextColor(ContextCompat.getColor(requireContext(), R.color.blueColor)).show();
                 } else {
-                    TTsSingle.initialize(requireContext(), new ResponseListener() {
+                    Speecher.initialize(requireContext(), new ResponseListener() {
                         @Override
                         public void onSuccess(Response response) {
-                            if (TTsSingle.isSupportLanguage(requireContext(), LanguageManager.getToLangaugeCode(requireContext()))) {
-                                TTsSingle.speak(requireContext(), fragment_translate_textview.getText().toString());
+                            if (Speecher.isSupportLanguage(requireContext(), LanguageManager.getToLangaugeCode(requireContext()))) {
+                                Speecher.speak(requireContext(), fragment_translate_textview.getText().toString());
                             } else {
                                 Toast.makeText(requireContext(), "بسته نرم افزار صوتی این زبان نصب نشده است", Toast.LENGTH_SHORT).show();
                             }

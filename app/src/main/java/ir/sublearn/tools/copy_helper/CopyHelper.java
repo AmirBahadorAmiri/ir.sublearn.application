@@ -4,6 +4,14 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 
+import java.util.Objects;
+
+/*
+ *   Created by: @AmirBahadorAmiri
+ *   Created at: 2026-06-13 13:28:56
+ *   Github: https://github.com/AmirBahadorAmiri
+ */
+
 public class CopyHelper {
 
     private static ClipboardManager clipboardManager;
@@ -20,7 +28,7 @@ public class CopyHelper {
     }
 
     public static String read() {
-        return clipboardManager.getPrimaryClip().getItemAt(0).getText().toString();
+        return Objects.requireNonNull(clipboardManager.getPrimaryClip()).getItemAt(0).getText().toString();
     }
 
 }

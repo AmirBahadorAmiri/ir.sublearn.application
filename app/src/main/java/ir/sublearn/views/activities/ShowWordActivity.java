@@ -23,7 +23,7 @@ import ir.sublearn.listener.ResponseListener;
 import ir.sublearn.models.WordModel;
 import ir.sublearn.tools.copy_helper.CopyHelper;
 import ir.sublearn.tools.mydb.MyDB;
-import ir.sublearn.tools.tts_manager.TTsSingle;
+import ir.sublearn.tools.speecher.Speecher;
 import ir.sublearn.tools.volume_manager.VolumeManager;
 import okhttp3.Response;
 
@@ -64,11 +64,11 @@ public class ShowWordActivity extends BaseActivity {
                     Snackbar.make(v, "صدای سیستم قطع است", Snackbar.LENGTH_LONG)
                             .setAction("افزایش صدا", n -> VolumeManager.setVolume(this, VolumeManager.getManager(this).getStreamMaxVolume(AudioManager.STREAM_MUSIC))).setActionTextColor(ContextCompat.getColor(this, R.color.blueColor)).show();
                 } else {
-                    TTsSingle.initialize(this, new ResponseListener() {
+                    Speecher.initialize(this, new ResponseListener() {
                         @Override
                         public void onSuccess(Response response) {
-                            if (TTsSingle.isSupportLanguage(ShowWordActivity.this, "en-US")) {
-                                TTsSingle.speak(ShowWordActivity.this, activity_show_word_from_textview.getText().toString());
+                            if (Speecher.isSupportLanguage(ShowWordActivity.this, "en-US")) {
+                                Speecher.speak(ShowWordActivity.this, activity_show_word_from_textview.getText().toString());
                             } else {
                                 Toast.makeText(ShowWordActivity.this, "بسته نرم افزار صوتی این زبان نصب نشده است", Toast.LENGTH_SHORT).show();
                             }
