@@ -1,0 +1,7 @@
+<svg id="history_icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <circle id="Ellipse_1" data-name="Ellipse 1" cx="20" cy="20" r="20" fill="#2c2f42"/>
+  <g id="History" transform="translate(8 8)">
+    <path id="Path_95" data-name="Path 95" d="M15,7.5A7.5,7.5,0,1,1,7.5,15,.75.75,0,0,0,6,15,9,9,0,1,0,9,8.29V6.75a.75.75,0,0,0-1.5,0v4.5a.749.749,0,0,0,.75.75h3a.75.75,0,0,0,0-1.5H9A7.479,7.479,0,0,1,15,7.5Zm0,3.75a.75.75,0,0,0-1.5,0v4.5a.749.749,0,0,0,.75.75h3a.75.75,0,0,0,0-1.5H15Z" transform="translate(-3 -3)" fill="#919191"/>
+    <path id="Path_96" data-name="Path 96" d="M0,0H24V24H0Z" fill="none"/>
+  </g>
+</svg>

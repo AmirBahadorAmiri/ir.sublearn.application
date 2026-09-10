@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <radialGradient id="radial-gradient" cx="0.372" cy="1.001" r="1.247" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fd5"/>
+      <stop offset="0.328" stop-color="#ff543f"/>
+      <stop offset="0.348" stop-color="#fc5245"/>
+      <stop offset="0.504" stop-color="#e64771"/>
+      <stop offset="0.643" stop-color="#d53e91"/>
+      <stop offset="0.761" stop-color="#cc39a4"/>
+      <stop offset="0.841" stop-color="#c837ab"/>
+    </radialGradient>
+    <radialGradient id="radial-gradient-2" cx="0.161" cy="-0.012" r="0.828" gradientTransform="translate(0 -0.004) scale(1 0.666)" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#4168c9"/>
+      <stop offset="0.999" stop-color="#4168c9" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g id="ic_instagram" transform="translate(-5.99 -5.99)">
+    <path id="Path_216" data-name="Path 216" d="M43.34,53.965l-26.653.025A10.693,10.693,0,0,1,6.015,43.34L5.99,16.687A10.693,10.693,0,0,1,16.64,6.015L43.293,5.99A10.693,10.693,0,0,1,53.965,16.64l.025,26.653A10.691,10.691,0,0,1,43.34,53.965Z" fill="url(#radial-gradient)"/>
+    <path id="Path_217" data-name="Path 217" d="M43.34,53.965l-26.653.025A10.693,10.693,0,0,1,6.015,43.34L5.99,16.687A10.693,10.693,0,0,1,16.64,6.015L43.293,5.99A10.693,10.693,0,0,1,53.965,16.64l.025,26.653A10.691,10.691,0,0,1,43.34,53.965Z" fill="url(#radial-gradient-2)"/>
+    <path id="Path_218" data-name="Path 218" d="M26.328,35.657a9.328,9.328,0,1,1,9.328-9.328A9.34,9.34,0,0,1,26.328,35.657Zm0-15.992a6.663,6.663,0,1,0,6.663,6.663A6.671,6.671,0,0,0,26.328,19.665Z" transform="translate(3.662 3.662)" fill="#fff"/>
+    <circle id="Ellipse_20" data-name="Ellipse 20" cx="1.999" cy="1.999" r="1.999" transform="translate(37.986 17.997)" fill="#fff"/>
+    <path id="Path_219" data-name="Path 219" d="M36.32,45.648H20.328A9.34,9.34,0,0,1,11,36.32V20.328A9.34,9.34,0,0,1,20.328,11H36.32a9.34,9.34,0,0,1,9.328,9.328V36.32A9.34,9.34,0,0,1,36.32,45.648ZM20.328,13.665a6.671,6.671,0,0,0-6.663,6.663V36.32a6.671,6.671,0,0,0,6.663,6.663H36.32a6.671,6.671,0,0,0,6.663-6.663V20.328a6.671,6.671,0,0,0-6.663-6.663Z" transform="translate(1.666 1.666)" fill="#fff"/>
+  </g>
+</svg>

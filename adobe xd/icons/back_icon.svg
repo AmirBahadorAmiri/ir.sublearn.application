@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <g id="back_icon" transform="translate(-32 -32)">
+    <rect id="Rectangle_18" data-name="Rectangle 18" width="40" height="40" rx="8" transform="translate(32 32)" fill="none"/>
+    <g id="Chevron_Left" data-name="Chevron Left" transform="translate(35.337 35.337)">
+      <path id="Path_1" data-name="Path 1" d="M24.087,8.409a1.371,1.371,0,0,1,0,1.958l-8.734,8.741,8.734,8.741a1.384,1.384,0,0,1-1.958,1.958l-9.72-9.72a1.371,1.371,0,0,1,0-1.958l9.72-9.72A1.371,1.371,0,0,1,24.087,8.409Z" transform="translate(-3.668 -2.445)" fill="#919191"/>
+      <path id="Path_2" data-name="Path 2" d="M0,0H33.326V33.326H0Z" fill="none"/>
+    </g>
+  </g>
+</svg>

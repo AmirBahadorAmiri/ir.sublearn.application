@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1163.428" height="1319.545" viewBox="0 0 1163.428 1319.545">
+  <defs>
+    <filter id="Path_250" x="0" y="0" width="937.928" height="1319.545" filterUnits="userSpaceOnUse">
+      <feOffset dx="10" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="49.5" result="blur"/>
+      <feFlood flood-opacity="0.6"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="ic_launcher" transform="translate(-7582.5 1045.5)">
+    <rect id="Rectangle_1" data-name="Rectangle 1" width="1024" height="1024" transform="translate(7721.928 -898)" fill="#fafafa"/>
+    <line id="Line_4" data-name="Line 4" x2="1024" transform="translate(7721.928 126)" fill="none"/>
+    <text id="س" transform="translate(8148.928 -463)" fill="#258cf3" font-size="400" font-family="Vazir-Bold-FD-WOL, Vazir FD-WOL"><tspan x="0" y="0">س</tspan></text>
+    <g transform="matrix(1, 0, 0, 1, 7582.5, -1045.5)" filter="url(#Path_250)">
+      <path id="Path_250-2" data-name="Path 250" d="M9600-898,9856,124.545H9215.072V-898Z" transform="translate(-9076.57 1045.5)" fill="#258cf3"/>
+    </g>
+    <text id="S" transform="translate(7906.928 -172)" fill="#fafafa" font-size="500" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">S</tspan></text>
+  </g>
+</svg>
